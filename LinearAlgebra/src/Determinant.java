@@ -15,7 +15,7 @@ public class Determinant {
     for(int i = 0; i < matrix.length; i++) {
       
       if(matrix[i].length != matrix.length) {
-        
+         
         return Double.MIN_VALUE;
       }
       
