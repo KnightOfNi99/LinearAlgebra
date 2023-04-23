@@ -1,10 +1,4 @@
-/*
- * Author: Austin Barner
- * used this website to figure out how to calculate a determinant: https://www.mathsisfun.com/algebra/matrix-determinant.html
- * used this website to check my answers: https://www.wolframalpha.com/input?i2d=true
- * use the 2D array 'nums' in the main method to define a nxn matrix
- * 
- */
+
 
 
 public class Determinant {
@@ -37,7 +31,7 @@ public class Determinant {
       return (matrix[0][0] * matrix[1][1]) - (matrix[0][1] * matrix[1][0]);
     }
     
-    //recursively process matrices when n > 1
+    //recursively process matrices when n > 2
     double sum = 0.0;
     for(int i = 0; i < matrix.length; i++) {
       
@@ -75,10 +69,11 @@ public class Determinant {
   public static void main(String[] args) {
     
     double[][] nums = {
-        {1, 7, 3, 4},
-        {4, 3, 5, 1},
-        {2, 4, 6, 8},
-        {8, 6, 4, 2}
+        {1, 2, 4, 8, 9},
+        {3, 4, -8, 5, 1},
+        {3, 2, -8, 0, 2},
+        {-3, 4, 3, 5, 1},
+        {3, 4, -8, 0, 9},
     };
     
     System.out.println("Determinant: " + calcDeterminant(nums));
